@@ -1,0 +1,89 @@
+# schema.gql
+
+type Series {
+  title: String!
+  description: String
+  films: [Film]
+}
+
+type Film {
+  title: String
+  authors: [Author]
+  year: String
+  genre: String
+  numbernote: Int
+}
+
+type Author {
+  firstname: String
+  lastname: String
+  birthdate: String
+}
+
+type Query {
+  films: [Film]
+  authors: [Author]
+  series: [Series]
+}
+
+type Mutation {
+  addSeries(
+    title: String!
+    description: String
+    films: [FilmInput]
+  ): Series
+  modifySeries(
+    findTitle: String!
+    title: String!
+    description: String
+    films: [FilmInput]
+  ): Series
+  deleteSeries(title: String!): Boolean
+  addFilm(
+    title: String!
+    authors: [AuthorInput]!
+    year: String!
+    genre: String!
+    numbernote: Int!
+  ): Film
+  modifyFilm(
+    findTitle: String!
+    title: String!
+    authors: [AuthorInput]!
+    year: String!
+    genre: String!
+    numbernote: Int!
+  ): Film
+  deleteFilm(title: String!): Boolean
+  addAuthor(
+    firstname: String!
+    lastname: String!
+    birthdate: String!
+  ): Author
+  modifyAuthor(
+    firstname: String!
+    lastname: String!
+    birthdate: String!
+    newFirstname: String!
+    newLastname: String!
+    newBirthdate: String!
+  ): Author
+  deleteAuthor(
+    firstname: String!
+    lastname: String!
+  ): Boolean
+}
+
+input AuthorInput {
+  firstname: String!
+  lastname: String!
+  birthdate: String!
+}
+
+input FilmInput {
+  title: String
+  authors: [AuthorInput]
+  year: String
+  genre: String
+  numbernote: Int
+}

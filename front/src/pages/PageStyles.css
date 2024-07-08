@@ -1,0 +1,105 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+.page-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 70px;
+    margin-bottom: 20px;
+    color: red;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+    }
+  
+  .authors-list, .films-list, .series-list {
+    display: grid;
+    gap: 20px;
+  }
+  
+  .author-item, .film-item, .series-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: black;
+  }
+  
+  .author-item h2, .film-item h2, .series-item h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .author-item p, .film-item p, .series-item p {
+    margin-bottom: 5px;
+  }
+  
+  .author-item ul, .series-item ul {
+    margin-top: 5px;
+    padding-left: 20px;
+  }
+  
+  .film-item ul {
+    margin-top: 5px;
+    padding-left: 20px;
+    list-style-type: circle;
+  }
+  
+  /* styles.css */
+
+body {
+    margin: 0;
+    color: white;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: black; /* Couleur de fond de secours */
+  }
+  
+  header {
+    background-image: url('./background.png'); /* Remplacez par le chemin de votre image */
+    background-size: cover;
+    background-position: center;
+    height: 80vh; /* Utilise toute la h  de la vue */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff; /* Couleur du texte */
+  }
+  
+  main {
+    padding: 5em;
+  }
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    /* display: flex; */
+    justify-content: center;
+    text-align: left !important;
+  }
+  
+  nav ul li {
+    margin: 0 10px;
+    display: flex;
+    margin-top: 1em;
+  }
+  
+  nav ul li a {
+    width: 300px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #f15c5c; /* Couleur de survol */
+  }
+  
+  
